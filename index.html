@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+        
+        .head{
+            text-align: center;
+        }
+        .card{
+            height: 550px;
+            width: 350px;
+            background-color:#f6f6ee;
+            display: block;
+            margin: 0px auto;
+            box-shadow: 0 0 4px 5px  #d6d6c2;
+            border-radius: 10px;
+        }
+        .img{
+            height: 200px;
+            width: 200px;
+            display: block;
+            padding-top: 10px;    
+            margin: 0px auto; 
+        border-radius: 10px; 
+      }
+      .qantity{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .qty{
+            height: 30px;
+            width: 30px;
+        }
+        .qty-text{
+            font-size: 24px;
+        }
+        .btn{
+            padding: 10px 20px ;
+            background-color: black;
+            border-radius: 10px;
+            color: #fff;
+            width: 200px;
+            font-size: 20px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="head">Online cake shopping</h2>
+    <div class="card">
+        <img src="cake.jpeg"class="img">
+        <h3 class="head">Chocolate Cake</h3>
+        <h5 class="head">A chocolate cake is a cake made with chocolate or cocoa. The ingredients are put into a bowl and mixed together; then the mixed ingredients are put into a cake tin and put in an oven until it is fully cooked. Then the cake is taken out of the oven and placed on a cooling stand.</h5>
+        <h2 class="head">Rs.499</h2>
+        <div class="qantity">
+        <img src="plus.png"class="qty"onclick="inc()">
+        <span class="qty-text"id="quantitytext">1</span><img src="minus.png"class="qty"onclick="dec()">
+        </div>
+        <button type="button"class="btn">Buy Now</button>
+
+        </div>
+        <script>
+            function inc(){
+                const quantitytext =document.getElementById('quantitytext');
+                const quantity=parseInt(quantitytext.innerText);
+                quantitytext.innerText=quantity+1;
+
+            }
+
+            function dec(){
+                const quantitytext =document.getElementById('quantitytext');
+                const quantity=parseInt(quantitytext.innerText);
+                quantitytext.innerText=quantity-1;
+
+
+            }
+           </script>
+</body>
+</html>
